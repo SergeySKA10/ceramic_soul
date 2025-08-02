@@ -8,6 +8,21 @@
     font-size: 20px;
 }
 
+.btn-send {
+    @include button;
+    width: 220px;
+    height: 40px;
+    font-size: 16px;
+    &:focus {
+        outline: 1px solid $hover_color;
+        border: 1px solid $hover_color;
+    }
+    &:disabled {
+        border: 1px solid $ui_grey;
+        color: $ui_grey;
+    }
+}
+
 @media screen and (min-width: 1200px) and (hover: hover) {
     .btn-default {
         transition: all 0.3s;
@@ -20,6 +35,17 @@
             box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.4) inset;
             color: $ui_dark;
             border: none;
+        }
+    }
+    .btn-send {
+        transition: all 0.3s;
+        &:active {
+            outline: 1px solid $hover_color;
+            border: 1px solid $hover_color;
+        }
+        &:hover {
+            color: $hover_color;
+            border: 1px solid $hover_color;
         }
     }
 }
