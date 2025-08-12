@@ -23,6 +23,19 @@
     }
 }
 
+.btn-submit {
+    @include button;
+    width: 90px;
+    height: 40px;
+    font-size: 16px;
+    color: $main_color_background;
+    border: 1px solid $main_color_background;
+    &:disabled {
+        color: $active_color;
+        border: 1px solid $active_color;
+    }
+}
+
 @media screen and (min-width: 1200px) and (hover: hover) {
     .btn-default {
         transition: all 0.3s;

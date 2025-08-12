@@ -1,0 +1,95 @@
+@use '/src/sass/base/variables.scss' as *;
+
+.works {
+    padding-top: 60px;
+    &__wrapper {
+        position: relative;
+    }
+    &__slider {
+        margin-top: 40px;
+    }
+    .swiper-slide img {
+        width: 100%;
+    }
+    .works__slider_nav {
+        display: none;
+    }
+    .swiper-pagination {
+        bottom: -45px;
+    }
+    .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        background-color: $ui_dark;
+        border-radius: 0%;
+        opacity: 1;
+        -webkit-tap-highlight-color: transparent;
+    }
+    .swiper-pagination-bullet-active {
+        background-color: $hover_color;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .works {
+        &__slider {
+            margin-top: 45px;
+        }
+        .swiper-slide img {
+            width: 400px;
+            height: 263px;
+            object-fit: cover;
+            margin: 0 auto;
+            display: block;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .works {
+        &__slider {
+            margin-top: 80px 40px 0 40px;
+        }
+        .swiper-slide img {
+            width: 100%;
+            margin: 0;
+        }
+        .swiper-pagination {
+            bottom: -40px;
+        }
+        .works__slider_nav {
+            display: block;
+            font-size: 21px;
+            position: absolute;
+            background-color: transparent;
+            border: none;
+            top: 50%;
+            transform: translateY(-50%);
+            &:before {
+                width: auto;
+                margin: 0;
+            }
+        }
+        .icon-left-open {
+            left: -30px;
+        }
+        .icon-right-open {
+            right: -30px;
+        }
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .works {
+        padding-top: 100px;
+        &__slider {
+            margin: 80px 85px 0 85px;
+        }
+        .icon-left-open {
+            left: 40px;
+        }
+        .icon-right-open {
+            right: 40px;
+        }
+    }
+}
