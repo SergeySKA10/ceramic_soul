@@ -64,7 +64,44 @@
         }
     }
     &__checkbox {
+        position: relative;
+        transition: all 0.3s;
+        appearance: none;
         margin-right: 15px;
+        width: 15px;
+        height: 15px;
+        border: 1px solid $main_color_background;
+        border-radius: 2px;
+        cursor: pointer;
+        background-color: transparent;
+        &:checked {
+            background-color: $main_color_background;
+            border: 1px solid $ui_dark;
+            &::after {
+                content: '';
+                position: absolute;
+                left: 3px;
+                display: block;
+                background-color: $ui_dark;
+                width: 6px;
+                height: 2px;
+                transform: rotate(45deg);
+                bottom: 4px;
+                left: 1px;
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                left: 3px;
+                display: block;
+                background-color: $ui_dark;
+                width: 9px;
+                height: 2px;
+                transform: rotate(125deg);
+                bottom: 5px;
+                left: 4px;
+            }
+        }
     }
     &__form-btn {
         margin-top: 20px;
