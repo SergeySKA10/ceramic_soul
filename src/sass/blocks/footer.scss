@@ -3,6 +3,13 @@
 .footer {
     padding: 50px 0;
     background-color: $ui_dark;
+    .just-validate-error-field {
+        border-bottom: 1px solid $ui_error_color;
+        outline: transparent;
+        &::placeholder {
+            color: $ui_error_color;
+        }
+    }
     &_spaced {
         margin-top: 60px;
     }

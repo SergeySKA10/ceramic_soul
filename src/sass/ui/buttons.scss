@@ -36,6 +36,17 @@
     }
 }
 
+.btn-read {
+    @include button;
+    width: 145px;
+    height: 32px;
+    font-size: 14px;
+    &:focus {
+        outline: 1px solid $hover_color;
+        border: 1px solid $hover_color;
+    }
+}
+
 @media screen and (min-width: 1200px) and (hover: hover) {
     .btn-default {
         transition: all 0.3s;
@@ -52,6 +63,16 @@
     }
     .btn-send {
         transition: all 0.3s;
+        &:active {
+            outline: 1px solid $hover_color;
+            border: 1px solid $hover_color;
+        }
+        &:hover {
+            color: $hover_color;
+            border: 1px solid $hover_color;
+        }
+    }
+    .btn-read {
         &:active {
             outline: 1px solid $hover_color;
             border: 1px solid $hover_color;

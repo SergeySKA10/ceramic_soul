@@ -13,6 +13,10 @@
 }
 
 .form {
+    .just-validate-error-field {
+        border: none;
+        outline: 1px solid $ui_error_color;
+    }
     position: relative;
     &__img {
         &_vase {
